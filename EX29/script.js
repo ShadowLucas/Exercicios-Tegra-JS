@@ -1,0 +1,37 @@
+/*Pesquise o algoritmo de validação do CNPJ escreva um programa que
+valide qualquer CNPJ dado;
+Exemplos:
+CNPJ: 70.345.111/0001-09
+Saída: Inválido.
+CNPJ: 97.544.324/0001-22
+Saída: Válido.*/
+
+function main()
+{
+    var num = document.getElementById('cnpj').value
+    var result = document.getElementById('resultado')
+
+    result.innerHTML = validaCNPJ(num)
+}
+
+function validaCNPJ (cnpj) 
+{
+    var b = [ 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 ]
+    var c = String(cnpj).replace(/[^\d]/g, '')
+        
+    if(c.length !== 14)
+        return "Inválido"
+    
+    if(/0{14}/.test(c))
+        return "Inválido"
+    
+    for (var i = 0, n = 0; i < 12; n += c[i] * b[++i]);
+        if(c[12] != (((n %= 11) < 2) ? 0 : 11 - n))
+            return "Inválido"
+    
+    for (var i = 0, n = 0; i <= 12; n += c[i] * b[i++]);
+        if(c[13] != (((n %= 11) < 2) ? 0 : 11 - n))
+            return "Inválido"
+    
+    return "Válido"
+}

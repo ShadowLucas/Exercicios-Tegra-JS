@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+
+        <title>Recebe Medidas</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Recebe Medidas</h1>
+        </header>
+
+        <section>
+            <div>
+                <p>Base:
+                    <input type="number" name="numBase" id="numBase">
+                </p>
+                <p>Altura:
+                    <input type="number" name="numAltura" id="numAltura">
+                </p>
+
+                <p>
+                    <input type="button" value="Calcular!" onclick="areaRetang()">
+                </p>
+                
+            </div>
+                
+            <div id="AREA"> </div>
+            <div id="PERIMETRO"></div>
+            <div id="DIAGONAL"></div>
+        </section>
+
+        <footer>
+            Ex2 TEGRA
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

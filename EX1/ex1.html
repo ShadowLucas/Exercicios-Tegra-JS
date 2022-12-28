@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+
+        <title>Recebe Medidas</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Recebe Medidas</h1>
+        </header>
+
+        <section>
+            <div>
+                <p>Largura:
+                    <input type="number" name="numLargura" id="numLargura" min="0.0">
+                </p>
+                <p>Comprimento:
+                    <input type="number" name="numComprimento" id="numComprimento" min="0.0">
+                </p>
+                <p>Preço Do Metro Quadrado:
+                    <input type="number" name="numMetroQuad" id="numMetroQuad"" min="0.00">
+                </p>
+                
+                <p>
+                    <input type="button" value="Total" onclick="calculaAreaeValor()">
+                </p>
+                
+            </div>
+                
+            <div id="Area">
+                <p>Area Total:
+                    
+                </p>
+            </div>
+
+            <div id="ValorTotal">
+                <p>Valor total:
+
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            Ex1 TEGRA
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
